@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/my profile 1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/aurora-condensed">
+    <title>Aung Kaung Khant</title>
+</head>
+<body>
+    <div class="loader show" id="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="navbar">
+       <div class="nav-brand">
+           Aung Kaung Khant 
+       </div>
+       <div class="nav-fill">
+
+       </div>
+       <div class="menu nav-btn">
+           <div class="menuItem1 menuItem"></div>
+           <div class="menuItem2 menuItem"></div>
+           <div class="menuItem3 menuItem"></div>
+       </div>
+       <ul class="navbar-link">
+           <li class="navbar-link-item nav-btn active" data-content="home" ><a data-content="home" href="#home">Home</a></li>
+           <li class="navbar-link-item nav-btn" data-content="about" ><a data-content="about" href="#about">About</a></li>
+           <li class="navbar-link-item nav-btn" data-content="projects" ><a data-content="projects" href="#projects">Projects</a></li>
+           <li class="navbar-link-item nav-btn" data-content="contacts" ><a data-content="contacts" href="#contacts">Contacts</a></li>
+       </ul>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <div class="htext">
+                <h1>Hi I'm</h1>
+                <h2>Aung Kaung Khant</h2>
+                <h3><b style="display:block;">i'm a</b> 
+                    <ul class="animatedText">
+                        <li><b>Graphic Designer</b></li>
+                        <li><b>Web Developer</b></li>
+                        <li class="lastL"><b>Gamer</b></li>
+                    </ul>
+                    </h3>
+                <a class="btn" href="">Hire</a>
+            </div>
+            <div class="hprofile">
+                <img src="./img/my profile 1.jpg" alt="" srcset="">
+                <svg>
+                    <defs>
+                      <filter id="filter">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -10" result="filter" />
+                        <feComposite in="SourceGraphic" in2="filter" operator="atop" />
+                      </filter>
+                    </defs>
+                  </svg>
+                <div class="profileAnimation">
+                    <span class="" style="--count : 1"></span>
+                    <span class="" style="--count : 2"></span>
+                    <span class="" style="--count : 3"></span>
+                    <span class="" style="--count : 4"></span>
+                    <span class="" style="--count : 5"></span>
+                    <span class="" style="--count : 6"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="aboutImg">
+            <img src="./img/ab img 1.png" style="--img : 1" alt="" srcset="">
+            <img src="./img/ab img 2.png" style="--img : 2" alt="" srcset="">
+            <img src="./img/ab img 3.png" style="--img : 3" alt="" srcset="">
+            <img src="./img/ab img 4.png" style="--img : 4" alt="" srcset="">
+            <img src="./img/ab img 5.png" style="--img : 5" alt="" srcset="">
+            <img src="./img/ab img 6.png" style="--img : 6" alt="" srcset="">
+            <img src="./img/ab img 7.png" style="--img : 7" alt="" srcset="">
+        </div>
+        <div class="aboutText">
+            <h1>
+                About
+                <a></a>
+            </h1>
+            <p>I learned Graphics Design from the first day of January, 2021. Before I had learned Graphics Design, I do Front-End Web Development. I love to learn continuously new tech things and I love watching animations, eSports and learning new languages. </p>
+            <h3>What can I offer?</h3>
+            <p> I can do beautiful Websites and Graphics Designs for Marketing, Social Media Branding, Outdoor Printing Designs etc.. . I <b>value</b> my clients and finish the works before deadline.</p>
+        
+        </div>
+    </section>
+    <section id="projects">
+        <h1 class="projectHeader">
+            Projects By Me
+        </h1>
+        <ul class="projectsBtns">
+            <li class="projectsBtn active" data-catagory="*">All</li>
+            <li class="projectsBtn" data-catagory="Websites">Websites</li>
+            <li class="projectsBtn" data-catagory="SocialMedia Designs">SocialMedia Designs</li>
+            <li class="projectsBtn" data-catagory="Printing Designs">Printing Designs</li>
+            <li class="projectsBtn" data-catagory="Recent Projects">Recent Projects</li>
+        </ul>
+        <div class="projectsItems">
+                  
+        </div>
+    </section>
+    <section id="contacts">
+        <div class="cContainer">
+            
+                <form action="post">
+                    <img class="ring" src="./img/Group 1.png" alt="">
+                    <input type="text" name="username" id="" placeholder="YourName">
+                    <input type="email" name="email" id="" placeholder="YourEmail">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <input class="sendBtn" type="submit" value="Send">
+                </form>
+            
+            <div class="socialIcons">
+                <img src="./img/facebook-f-brands.svg" alt="">
+                <img src="/img/instagram-brands.svg" alt="" srcset="">
+                <img src="/img/twitter-brands.svg" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+    <footer style="text-align: center; font-size: 20px; padding: 20px;">CopyRight &COPY; By Aung Kaung Khant</footer>
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>
