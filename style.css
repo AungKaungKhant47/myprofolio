@@ -560,7 +560,7 @@ section {
 }
 
 .loader {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background: rgb(27, 27, 27);
