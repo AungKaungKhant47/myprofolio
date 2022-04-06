@@ -60,7 +60,7 @@ body {
 .navbar-link-item {
   list-style: none;
   position: relative;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 100;
 }
 .navbar-link-item a {
@@ -138,12 +138,13 @@ section {
 
 #home {
   display: flex;
+  height: 100vh !important;
 }
 #home .container {
   padding: 0 30px;
   padding-bottom: 10%;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh !important;
   margin: auto;
   display: flex;
   column-count: 2;
@@ -453,7 +454,7 @@ section {
 /* projects end */
 #contacts {
   width: 100%;
-  min-height: 100vh !important;
+  height: 100vh !important;
   padding-bottom: 5vh;
   background-color: rgb(34, 34, 34);
   display: flex;
@@ -469,8 +470,8 @@ section {
 }
 .cContainer .ring {
   width: 15%;
-  top: 0;
-  left: 0;
+  top: -10%;
+  left: -2rem;
   position: absolute;
   animation: ringing 3s infinite ease-in alternate;
 }
@@ -488,16 +489,21 @@ section {
   }
 }
 .cContainer form {
-  width: 60%;
-  height: 50%;
-  padding: 5% 10%;
+  box-sizing: border-box;
+  width: 70%;
+  margin: 10%;
+  padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(26, 25, 25);
   border-radius: 50px;
   position: relative;
+  transform: scale(0.8);
 }
 .cContainer form input {
+  width: 80%;
   outline: none;
   border: none;
   padding: 10px 20px;
@@ -505,9 +511,9 @@ section {
   border-bottom: 3px solid white;
   background: transparent;
   color: wheat;
-  font-size: 100%;
 }
 .cContainer form textarea {
+  width: 80%;
   padding: 20px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
@@ -516,9 +522,10 @@ section {
   margin-bottom: 20px;
 }
 .cContainer form .sendBtn {
+  width: 20%;
   cursor: pointer;
-  width: 30%;
-  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
   color: rgb(0, 255, 179);
   border: 2px solid rgb(0, 255, 179);
 }
@@ -782,6 +789,9 @@ section {
       rgba(22, 22, 22, 0.466) 90%
     );
   }
+  #contacts {
+    margin-bottom: 20%;
+  }
   .cContainer {
     padding-left: 0;
     width: 100%;
@@ -794,8 +804,11 @@ section {
     top: -3%;
   }
   .cContainer form {
-    width: 80%;
+    width: 100%;
     margin: auto;
+  }
+  .cContainer form textarea {
+    width: 80%;
   }
   .cContainer .socialIcons {
     bottom: -20%;
@@ -841,17 +854,17 @@ section {
 @media (min-width: 860px) and (max-width: 1400px) {
   .htext {
     position: absolute;
-    top: 10%;
+    top: 0;
     margin-left: 0;
     left: 15%;
-    order: 1;
+    order: 0;
     transform: scale(0.8);
     width: 350%;
   }
   .hprofile {
-    bottom: -4%;
+    bottom: 10%;
     margin-right: 3%;
-    order: 0;
+    order: 1;
     transform: scale(0.5);
     width: 55%;
   }
