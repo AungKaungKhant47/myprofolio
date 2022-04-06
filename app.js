@@ -7,7 +7,7 @@ let currentScroll = window.scrollY;
 
 setTimeout(() => {
       loader.classList.remove('show');
-   }, 10000);
+   }, 5000);
 
 
 // setTimeout(() => {
@@ -39,6 +39,11 @@ window.onscroll = function(){
          active(btn);
       }else {
          removeC(btn);
+      }
+      if(window.scrollY > scroll1-100 && window.scrollY < scroll2-100 ){
+         active(btn);
+         section.classList.add('showed');
+         section.classList.remove('hidden');
       }
    })
 }

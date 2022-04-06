@@ -131,6 +131,7 @@ body {
 }
 /* sections start */
 section {
+  transition: 0.2s;
   width: 100vw;
   min-height: 100vh;
 }
@@ -636,7 +637,15 @@ section {
     transform: translate(24px, 0);
   }
 }
-
+.hidden {
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.showed {
+  opacity: 1;
+  transform: translateX(0);
+}
 @media (max-width: 560px) {
   .htext {
     margin: 0;
