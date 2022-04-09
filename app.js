@@ -2,13 +2,17 @@ const nav = document.querySelector('nav');
 const navBtn = document.querySelectorAll('.navbar-link-item');
 const menu = document.querySelector('.menu');
 const sections = document.querySelectorAll('section');
+const home = document.getElementById('home');
 const loader = document.getElementById('loader');
 let currentScroll = window.scrollY;
 
 setTimeout(() => {
       loader.classList.remove('show');
    }, 5000);
-
+setTimeout(() => {
+   home.classList.remove('hidden');
+   home.classList.add('showed');
+}, 7000);
 
 // setTimeout(() => {
 //       loader.classList.remove('show');
@@ -40,7 +44,7 @@ window.onscroll = function(){
       }else {
          removeC(btn);
       }
-      if(window.scrollY > scroll1-100 && window.scrollY < scroll2-100 ){
+      if(window.scrollY > scroll1-250 && window.scrollY < scroll2-250 ){
          active(btn);
          section.classList.add('showed');
          section.classList.remove('hidden');
@@ -85,30 +89,79 @@ const projectsItems = [
       id : 3,
       header : ' ',
       catagory : 'Printing Designs' ,
-      img : './img/cosmetic set.jpg',
+      img : './img/POTATO.jpg',
       tags : '' ,
    } ,
    {
       id : 4,
       header : ' ',
-      catagory : 'Recent Projects' ,
-      img : './img/cosmetic set.jpg',
+      catagory : 'Printing Designs' ,
+      img : './img/flyer.jpg',
       tags : '' ,
    } ,
    {
       id : 5,
       header : ' ',
       catagory : 'SocialMedia Designs' ,
-      img : './img/cosmetic set.jpg',
+      img : './img/grab 1.jpg',
       tags : '' ,
    },
    {
       id : 6,
       header : ' ',
       catagory : 'SocialMedia Designs' ,
-      img : './img/cosmetic set.jpg',
+      img : './img/watermelon.jpg',
       tags : '' ,
-   }
+   },
+   {
+      id : 7,
+      header : ' ',
+      catagory : 'SocialMedia Designs' ,
+      img : './img/water melon.jpg',
+      tags : '' ,
+   },
+   {
+      id : 8,
+      header : ' ',
+      catagory : 'SocialMedia Designs' ,
+      img : './img/phone1.jpg',
+      tags : '' ,
+   },
+   {
+      id : 8,
+      header : ' ',
+      catagory : 'SocialMedia Designs' ,
+      img : './img/phone1.jpg',
+      tags : '' ,
+   },
+   {
+      id : 9,
+      header : ' ',
+      catagory : 'SocialMedia Designs' ,
+      img : './img/logitech speaker.jpg',
+      tags : '' ,
+   },
+   {
+      id : 10,
+      header : ' ',
+      catagory : 'Esports' ,
+      img : './img/wr 1.jpg',
+      tags : '' ,
+   },
+   {
+      id : 11,
+      header : ' ',
+      catagory : 'Esports' ,
+      img : './img/wr 2.jpg',
+      tags : '' ,
+   },
+   {
+      id : 12,
+      header : ' ',
+      catagory : 'Printing Designs' ,
+      img : './img/flyer.jpg',
+      tags : '' ,
+   } ,
 ]
 function createProjects(item) {
    return `<div class="projectsItem " data-catagory="${item.catagory}">
@@ -119,16 +172,46 @@ function createProjects(item) {
       </h4>
   </div>`
 }
+// const projectsI = [...document.querySelectorAll('.projectsItem')];
 const projectsBtns = document.querySelectorAll('.projectsBtn');
+const loadMoreBtn = document.getElementById('loadMore');
 console.log(projectsBtns);
-window.onload = function() {
-   let projectsItemsAll = projectsItems.map(item => createProjects(item));
-   projectsItemsAll = projectsItemsAll.join('');
-   projects.innerHTML = projectsItemsAll;
+
+let noOfItems = 4;
+   loadMore(projectsItems);
+
+   function loadMore(items){
+        let items0 = items.map(item => createProjects(item));
+         let Items1 = [...items0];
+         console.log(Items1);
+         let Items =[];
+         if(Items1.length > noOfItems){
+            Items = [...Items1].slice(0,noOfItems);
+            console.log(Items)
+         }else {
+            Items = [...Items1];
+         }
+         console.log(Items);
+         let JoinedItems = Items.join('');
+         
+         projects.innerHTML = JoinedItems;
+         if(Items1.length < 4 || Items1.length < noOfItems) {
+         loadMoreBtn.style.display = 'none';
+         }else{
+         loadMoreBtn.style.display = 'block';
+         }
+         loadMoreBtn.addEventListener('click' , function (e) {
+         e.preventDefault();
+         noOfItems += 4;
+         loadMore(items);
+         popUp();
+   })
 }
+
 const projectsItemsE = document.querySelectorAll('.projectsItem');
 projectsBtns.forEach(btn => {
    btn.addEventListener('click' , function(){
+      noOfItems = 4;
       projectsBtns.forEach(btn => btn.classList.remove('active'));
       btn.classList.add('active');  
       let btnNow = btn.getAttribute('data-catagory');
@@ -142,10 +225,34 @@ projectsBtns.forEach(btn => {
          }
       })
      console.log(currentItems);
-     currentItems = currentItems.map(item => createProjects(item));
-     console.log(currentItems);
-     currentItems = currentItems.join('');
-     projects.innerHTML = currentItems;
+     loadMore(currentItems);
+     popUp();
    })
    
 })
+
+// click images
+function popUp(){
+const images = [...document.querySelectorAll('.projectsItem img')];
+console.log(images);
+images.forEach((image) => {
+   image.addEventListener('click' , function(e){
+      e.preventDefault();
+      let src = image.getAttribute('src');
+      console.log(src);
+      modalImage(src);
+   })
+});
+
+const modal_wrapper = document.getElementById('modal-wrapper');
+const closeBtn = document.getElementById('closeBtn');
+const image = document.getElementById('popupImage');
+function modalImage(src){
+   image.setAttribute('src' , src);
+   modal_wrapper.style.display = "flex";
+   closeBtn.addEventListener('click' , function(){
+      modal_wrapper.style.display = 'none';
+   })
+}
+}
+popUp();
