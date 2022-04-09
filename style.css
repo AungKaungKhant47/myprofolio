@@ -680,7 +680,7 @@ section {
 
 #modal-wrapper {
   position: fixed;
-  overflow: hidden;
+  overflow-y: scroll;
   display: none;
   justify-content: center;
   align-items: center;
