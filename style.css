@@ -680,7 +680,6 @@ section {
 
 #modal-wrapper {
   position: fixed;
-  overflow-y: scroll;
   display: none;
   justify-content: center;
   align-items: center;
@@ -711,7 +710,7 @@ section {
 } */
 #modal-wrapper img {
   display: block;
-  width: 80%;
+  width: 35%;
   margin: 20% auto;
   animation: popup 0.3s 1 ease-in-out forwards;
 }
@@ -750,6 +749,9 @@ section {
     width: 40%;
     height: 95%;
     margin-right: 5%;
+  }
+  #modal-wrapper img {
+    width: 85%;
   }
 }
 @media (max-width: 860px) {
