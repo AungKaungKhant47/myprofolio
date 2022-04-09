@@ -265,6 +265,7 @@ section {
   position: relative;
 }
 .hprofile img {
+  opacity: 1;
   z-index: 2;
   position: relative;
   width: 100%;
@@ -293,9 +294,9 @@ section {
   background-color: rgb(95, 255, 103);
   position: absolute;
   top: calc(10% * var(--count));
-  left: calc(20px * var(--count));
-  width: 20%;
-  height: 20%;
+  left: calc(5px * var(--count));
+  width: 19%;
+  height: 19%;
   border-radius: 50%;
   animation: liquid 2s infinite ease-in-out;
   animation-delay: calc(-0.2s * var(--count));
@@ -305,10 +306,10 @@ section {
     transform: translate(0px);
   }
   50% {
-    transform: translate(calc(10px * var(--count)), calc(20px * var(--count)));
+    transform: translate(calc(12px * var(--count)), calc(26px * var(--count)));
   }
   100% {
-    transform: translate(5px, calc(15px * var(--count)));
+    transform: translate(1px, calc(2px * var(--count)));
   }
 }
 #about {
@@ -835,8 +836,8 @@ section {
     width: 70%;
   }
   .hprofile .profileAnimation span {
-    top: calc(0.15% * var(--count));
-    left: calc(20px * var(--count));
+    top: calc(0.1% * var(--count));
+    left: calc(4px * var(--count));
   }
   #about {
     flex-direction: column;
@@ -930,8 +931,8 @@ section {
   }
   .hprofile .profileAnimation span {
     width: 20%;
-    top: calc(6% * var(--count));
-    left: calc(20px * var(--count));
+    top: calc(1% * var(--count));
+    left: calc(10px * var(--count));
   }
   #about .aboutImg {
     margin-bottom: 50%;
@@ -967,7 +968,7 @@ section {
     position: relative;
   }
   .hprofile .profileAnimation span {
-    top: calc(7% * var(--count));
-    left: calc(20px * var(--count));
+    top: calc(8% * var(--count));
+    left: calc(50px * var(--count));
   }
 }
