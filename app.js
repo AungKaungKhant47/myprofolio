@@ -28,6 +28,9 @@ menu.addEventListener('click' , function(){
     menu.classList.toggle('active');
 })
 
+const project = document.getElementById('projects');
+const skills = document.getElementById('skills');
+const skilledShowed = document.querySelectorAll('.skilled-show');
 window.onscroll = function(){
    if(window.scrollY > 40){
       nav.classList.add('fixed');
@@ -37,9 +40,9 @@ window.onscroll = function(){
    navBtn.forEach(btn => {
       const id = '#' + btn.getAttribute('data-content');
       const section = document.querySelector(id);
-      let scroll1 = section.offsetTop -100;
+      let scroll1 = section.offsetTop ;
       let scroll2 = section.scrollHeight + scroll1;
-      if(window.scrollY > scroll1 && window.scrollY < scroll2 ){
+      if(window.scrollY > scroll1 && window.scrollY < scroll2 -170 ){
          active(btn);
       }else {
          removeC(btn);
@@ -50,6 +53,12 @@ window.onscroll = function(){
          section.classList.remove('hidden');
       }
    })
+   const skillsTop = project.offsetTop -600;
+   console.log(skillsTop, window.scrollY);
+   if(window.scrollY > skillsTop ){
+      skilledShowed.forEach(skill => skill.classList.add('showed'));
+   }
+   
 }
 navBtn.forEach(btn => {
    btn.addEventListener('click' , function(){
@@ -73,102 +82,172 @@ let projects = document.querySelector('.projectsItems');
 const projectsItems = [
    {
       id : 1,
-      header : ' ',
-      catagory : 'Websites',
+      header : ' Bugers SM Ads',
+      catagory : 'SocialMedia Designs',
       img : "./img/burgers set.jpg" ,
-      tags : ' ' ,
+      text : "Something is about to show.",
+      tags : '  ' ,
    } ,
    {
       id : 2,
-      header : ' ',
+      header : ' Cosmetic SM Ads',
       catagory : 'SocialMedia Designs' ,
       img : './img/cosmetic set.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    } ,
    {
       id : 3,
-      header : ' ',
+      header : 'Potato Chips Packaging',
       catagory : 'Printing Designs' ,
       img : './img/POTATO.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    } ,
    {
       id : 4,
-      header : ' ',
+      header : 'School Admission Flyer ',
       catagory : 'Printing Designs' ,
       img : './img/flyer.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    } ,
    {
       id : 5,
-      header : ' ',
+      header : 'Grab SM Ads',
       catagory : 'SocialMedia Designs' ,
       img : './img/grab 1.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 6,
-      header : ' ',
+      header : 'WaterMelon Key Visual',
       catagory : 'SocialMedia Designs' ,
       img : './img/watermelon.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 7,
-      header : ' ',
+      header : 'Watermelon Drink Ads',
       catagory : 'SocialMedia Designs' ,
       img : './img/water melon.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 8,
-      header : ' ',
+      header : 'Redmi K30 Ads',
       catagory : 'SocialMedia Designs' ,
       img : './img/phone1.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 8,
-      header : ' ',
+      header : 'Kaw Pyant SM Ads',
       catagory : 'SocialMedia Designs' ,
-      img : './img/phone1.jpg',
+      img : './img/kaw pyant.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 9,
-      header : ' ',
+      header : 'Logitech Speaker Ads',
       catagory : 'SocialMedia Designs' ,
       img : './img/logitech speaker.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 10,
-      header : ' ',
+      header : 'WildRift Match Result',
       catagory : 'Esports' ,
       img : './img/wr 1.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 11,
-      header : ' ',
+      header : 'WildRift MatchDay Post',
       catagory : 'Esports' ,
       img : './img/wr 2.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    },
    {
       id : 12,
-      header : ' ',
+      header : 'Billboard For Royal Beer',
       catagory : 'Printing Designs' ,
-      img : './img/flyer.jpg',
+      img : './img/royal billboard.jpg',
+      text : "Something is about to show.",
       tags : '' ,
    } ,
+   {
+      id : 13,
+      header : 'Billboard For Car Showroom',
+      catagory : 'Printing Designs' ,
+      img : './img/golden life billboard.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   } ,
+   {
+      id : 14,
+      header : 'Billboard For Car Showroom',
+      catagory : 'Printing Designs' ,
+      img : './img/car billboard.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   } ,
+   {
+      id : 15,
+      header : 'Valorant Result Post',
+      catagory : 'Esports' ,
+      img : './img/valorant 1.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 16,
+      header : 'Valorant Result Post',
+      catagory : 'Esports' ,
+      img : './img/valorant 2.1.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 17,
+      header : 'Valorant Result Post',
+      catagory : 'Esports' ,
+      img : './img/valorant 3.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 18,
+      header : 'Marjin Jersey Ads',
+      catagory : 'Esports' ,
+      img : './img/marjin jersey ads.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 19,
+      header : 'Marjin Day1 Result',
+      catagory : 'Esports' ,
+      img : './img/Pubg 1.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
 ]
 function createProjects(item) {
    return `<div class="projectsItem " data-catagory="${item.catagory}">
       <img src="${item.img}" data-catagory="${item.catagory}">
       <h2>${item.header}</h2>
+      <p>${item.text}</p>
       <h4 class="tags">
-          <li>${item.tags}</li>
+          <b>${item.tags}</b>
       </h4>
   </div>`
 }
