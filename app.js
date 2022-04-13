@@ -244,11 +244,13 @@ const projectsItems = [
 function createProjects(item) {
    return `<div class="projectsItem " data-catagory="${item.catagory}">
       <img src="${item.img}" data-catagory="${item.catagory}">
+      <div>
       <h2>${item.header}</h2>
       <p>${item.text}</p>
       <h4 class="tags">
           <b>${item.tags}</b>
       </h4>
+      </div>
   </div>`
 }
 // const projectsI = [...document.querySelectorAll('.projectsItem')];
