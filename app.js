@@ -236,7 +236,7 @@ const projectsItems = [
       id : 19,
       header : 'Marjin Day1 Result',
       catagory : 'Esports' ,
-      img : './img/Pubg 1.jpg',
+      img : './img/pubg 1.jpg',
       text : "Something is about to show.",
       tags : '' ,
    },
