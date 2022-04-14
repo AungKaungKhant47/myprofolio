@@ -603,7 +603,6 @@ section {
   }
 }
 .cContainer form {
-  overflow: hidden;
   box-sizing: border-box;
   width: 70%;
   margin: 10%;
