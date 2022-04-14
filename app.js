@@ -82,11 +82,11 @@ let projects = document.querySelector('.projectsItems');
 const projectsItems = [
    {
       id : 1,
-      header : ' Bugers SM Ads',
-      catagory : 'SocialMedia Designs',
-      img : "./img/burgers set.jpg" ,
+      header : 'Billboard For Royal Beer',
+      catagory : 'Printing Designs' ,
+      img : './img/royal billboard.jpg',
       text : "Something is about to show.",
-      tags : '  ' ,
+      tags : '' ,
    } ,
    {
       id : 2,
@@ -106,12 +106,12 @@ const projectsItems = [
    } ,
    {
       id : 4,
-      header : 'School Admission Flyer ',
-      catagory : 'Printing Designs' ,
-      img : './img/flyer.jpg',
+      header : 'Marjin Day1 Result',
+      catagory : 'Esports' ,
+      img : './img/pubg 1.jpg',
       text : "Something is about to show.",
       tags : '' ,
-   } ,
+   },
    {
       id : 5,
       header : 'Grab SM Ads',
@@ -178,11 +178,11 @@ const projectsItems = [
    },
    {
       id : 12,
-      header : 'Billboard For Royal Beer',
-      catagory : 'Printing Designs' ,
-      img : './img/royal billboard.jpg',
+      header : ' Bugers SM Ads',
+      catagory : 'SocialMedia Designs',
+      img : "./img/burgers set.jpg" ,
       text : "Something is about to show.",
-      tags : '' ,
+      tags : '  ' ,
    } ,
    {
       id : 13,
@@ -232,14 +232,7 @@ const projectsItems = [
       text : "Something is about to show.",
       tags : '' ,
    },
-   {
-      id : 19,
-      header : 'Marjin Day1 Result',
-      catagory : 'Esports' ,
-      img : './img/pubg 1.jpg',
-      text : "Something is about to show.",
-      tags : '' ,
-   },
+
 ]
 function createProjects(item) {
    return `<div class="projectsItem " data-catagory="${item.catagory}">

@@ -547,17 +547,17 @@ section {
   padding: 10px 20px;
   display: block;
   margin: 20px auto;
-  background-color: transparent;
+  background-color: black;
   color: rgb(0, 255, 179);
   outline: none;
   box-shadow: none;
   cursor: pointer;
   border-top: rgb(0, 255, 179);
   border-left: rgb(0, 255, 179);
-  z-index: 10000;
-  position: relative;
-
-  bottom: 0;
+  z-index: 1000000000000;
+  position: absolute;
+  left: 47%;
+  bottom: 30px;
 }
 
 @keyframes lightMove {
@@ -574,6 +574,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .cContainer {
   width: 100%;
@@ -603,6 +604,7 @@ section {
   }
 }
 .cContainer form {
+  overflow: hidden;
   box-sizing: border-box;
   width: 70%;
   margin: 10%;
