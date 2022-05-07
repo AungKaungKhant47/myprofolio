@@ -42,12 +42,12 @@ window.onscroll = function(){
       const section = document.querySelector(id);
       let scroll1 = section.offsetTop ;
       let scroll2 = section.scrollHeight + scroll1;
-      if(window.scrollY > scroll1 && window.scrollY < scroll2 -170 ){
+      if(window.scrollY > scroll1 && window.scrollY < scroll2 - 180 ){
          active(btn);
       }else {
          removeC(btn);
       }
-      if(window.scrollY > scroll1-250 && window.scrollY < scroll2-250 ){
+      if(window.scrollY > scroll1-320 && window.scrollY < scroll2-250 ){
          active(btn);
          section.classList.add('showed');
          section.classList.remove('hidden');
@@ -229,6 +229,38 @@ const projectsItems = [
       header : 'Marjin Jersey Ads',
       catagory : 'Esports' ,
       img : './img/marjin jersey ads.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 19,
+      header : 'Marjin Result',
+      catagory : 'Esports' ,
+      img : './img/result mernatt.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 20,
+      header : 'Marjin Roster Annoument',
+      catagory : 'Esports' ,
+      img : './img/roster announment sea play-in.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 21,
+      header : 'Marjin Match Day',
+      catagory : 'Esports' ,
+      img : './img/md mernatt.jpg',
+      text : "Something is about to show.",
+      tags : '' ,
+   },
+   {
+      id : 22,
+      header : 'MasterVape Cover Photo',
+      catagory : 'Esports' ,
+      img : './img/mastervape cover.jpg',
       text : "Something is about to show.",
       tags : '' ,
    },
